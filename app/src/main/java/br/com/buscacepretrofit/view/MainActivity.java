@@ -1,5 +1,6 @@
 package br.com.buscacepretrofit.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -118,7 +119,19 @@ public class MainActivity extends AppCompatActivity {
 
                                     for (CEP cep : CEPAux) {
                                         arrayCEPs.add(cep);
+
+                                        //retorna o cep e o bairro se o endereço informado estiver
+                                        //completo
+                                        etCEP.setText(cep.getCep());
+                                        etBairro.setText(cep.getBairro());
+                                        etEstado.setText(cep.getUf());
                                     }
+
+                                    //chama a tela o recyclerview de endereços para escolher e retornar
+                                    //para a tela de cadastro
+                                    Intent intent = new Intent(MainActivity.this,RetornaCepsActivity.class);
+                                    intent.putExtra("CEP", arrayCEPs);
+                                    startActivity(intent);
 
                                     toast(getResources().getString(R.string.toast_aviso_retorno) + arrayCEPs.toString());
                                     progressBar.setVisibility(View.INVISIBLE);
