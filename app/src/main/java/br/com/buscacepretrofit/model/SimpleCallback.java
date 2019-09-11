@@ -1,4 +1,4 @@
-package br.com.buscacepretrofit.interfaces;
+package br.com.buscacepretrofit.model;
 
 public interface SimpleCallback<T> {
 

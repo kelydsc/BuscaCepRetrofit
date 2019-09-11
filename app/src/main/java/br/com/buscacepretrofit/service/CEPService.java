@@ -1,4 +1,4 @@
-package br.com.buscacepretrofit.data.network;
+package br.com.buscacepretrofit.service;
 
 import android.content.Context;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import br.com.buscacepretrofit.helpers.CEPDeserializer;
-import br.com.buscacepretrofit.interfaces.SimpleCallback;
+import br.com.buscacepretrofit.model.SimpleCallback;
 import br.com.buscacepretrofit.model.CEP;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

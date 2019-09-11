@@ -1,4 +1,4 @@
-package br.com.buscacepretrofit.data.network;
+package br.com.buscacepretrofit.service;
 
 import java.util.List;
 

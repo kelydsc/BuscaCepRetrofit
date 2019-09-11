@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.buscacepretrofit.R;
-import br.com.buscacepretrofit.data.network.CEPService;
-import br.com.buscacepretrofit.interfaces.SimpleCallback;
+import br.com.buscacepretrofit.service.CEPService;
+import br.com.buscacepretrofit.model.SimpleCallback;
 import br.com.buscacepretrofit.model.CEP;
 
 public class MainActivity extends AppCompatActivity {
@@ -126,12 +126,6 @@ public class MainActivity extends AppCompatActivity {
                                         etBairro.setText(cep.getBairro());
                                         etEstado.setText(cep.getUf());
                                     }
-
-                                    //chama a tela o recyclerview de endereços para escolher e retornar
-                                    //para a tela de cadastro
-                                    Intent intent = new Intent(MainActivity.this,RetornaCepsActivity.class);
-                                    intent.putExtra("CEP", arrayCEPs);
-                                    startActivity(intent);
 
                                     toast(getResources().getString(R.string.toast_aviso_retorno) + arrayCEPs.toString());
                                     progressBar.setVisibility(View.INVISIBLE);
